@@ -1,0 +1,209 @@
+body{
+    margin: 0px;
+    background-color: black;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-size: cover;
+}
+.card-groups,
+.card-group,
+.card{
+    aspect-ratio: 5/7;
+}
+.card-groups,
+.card-group,
+.big-card{
+    width: 30vmin;
+}
+
+.card-group{
+    position: absolute;
+    transition: transform 400ms ease;
+}
+
+
+.card{
+    background-color: rgba(255, 255, 255,0.1);
+    position: absolute;
+    transition: transform 800ms cubic-bezier(.05,.43,.25,.96);
+    background-size: cover;
+}
+.big-card{
+    width: 30vmin;
+    border-radius: 1vmin;
+}
+.little-card{
+    width: 12vmin;
+    border-radius: 2vmin;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.big-card:nth-child(2){
+    background-image: url("https://i.pinimg.com/564x/fc/21/e0/fc21e0a5054161328185906e1c467f08.jpg");
+    transform: translateX(-10%) rotate(-1deg);
+}
+.big-card:nth-child(4){
+    background-image: url("https://i.pinimg.com/564x/db/69/33/db6933b03ab73487e7db2c08cf92e9dd.jpg");
+    transform: rotate(2deg);
+}
+.big-card:nth-child(6){
+    background-image: url("https://i.pinimg.com/564x/42/fe/e1/42fee1fabaee43ea631876d1a9d0c609.jpg");
+    transform: translateX(-6%) rotate(-3deg);
+}
+.big-card:nth-child(8){
+    background-image: url("https://i.pinimg.com/564x/ab/13/71/ab13714e0c2391d3d793f26a6c10e849.jpg");
+    transform: translate(10%,3%) rotate(5deg);
+}
+.little-card:nth-child(1){
+    background-image: url("https://i.pinimg.com/564x/b2/5e/eb/b25eeb2f8799e3a342579d4c41040fa9.jpg");
+}
+.little-card:nth-child(3){
+    background-image: url("https://i.pinimg.com/736x/f9/f4/01/f9f4016f8b43585166bdc3b0e7d6dc45.jpg");
+}
+.little-card:nth-child(5){
+    background-image: url("https://i.pinimg.com/564x/61/59/77/61597718f78953734a76cabeb8c10c95.jpg");
+}
+.little-card:nth-child(7){
+    background-image: url("https://i.pinimg.com/564x/27/f5/a9/27f5a937d2cba9b272757a5f7ce46d57.jpg");
+}
+
+.card-group:hover > .big-card:nth-child(2){
+    transform: translate(-75%, 16%) rotate(-24deg);
+}
+.card-group:hover > .big-card:nth-child(4){
+    transform: translate(-25%, 8%) rotate(-8deg);
+}
+.card-group:hover > .big-card:nth-child(6){
+    transform: translate(25%, 8%) rotate(8deg);
+}
+.card-group:hover > .big-card:nth-child(8){
+    transform: translate(75%, 16%) rotate(24deg);
+}
+
+
+.card-group:hover > .little-card:nth-child(1){
+    transform: translate(200%, -160%) rotate(-15deg);
+}
+.card-group:hover > .little-card:nth-child(3){
+    transform: translate(160%, 170%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(5){
+    transform: translate(-200%, -170%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(7){
+    transform: translate(-280%, 140%) rotate(-15deg);
+}
+
+.card-swiper-buttons{
+    margin-top: 8vmin;
+    display: flex;
+    justify-content: space-around;
+    padding: 0vmin 4vmin;
+}
+
+#love-button{
+    color: rgb(33,150,243);
+    border-color:rgb(33,150,243) ;
+}
+
+.card-swiper-buttons > button{
+    font-size: 4vmin;
+    border: 0.4vmin solid rgb(200,200,200);
+    border-radius: 100%;
+    color: white;
+    background-color: transparent;
+    min-height: 7vmin;
+    min-width: 7vmin;
+    cursor: pointer;
+}
+
+.card-group[data-status="unknown"]{
+    transform: scale(0);
+}
+
+.card-group[data-status="after"]{
+    transform: translateX(50%) scale(0);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(2){
+    background-image: url("https://i.pinimg.com/564x/16/fd/fd/16fdfde3358e394371e0e6799f670996.jpg");
+}
+.card-group[data-index="1"] > .big-card:nth-child(4){
+    background-image: url("https://i.pinimg.com/564x/11/61/e3/1161e3717606dbdbebbedf033cd73456.jpg");
+}
+.card-group[data-index="1"] > .big-card:nth-child(6){
+    background-image: url("https://i.pinimg.com/736x/fe/14/cf/fe14cf8b14ab8e4008c3f4ca6713c22d.jpg");
+}
+.card-group[data-index="1"] > .big-card:nth-child(8){
+    background-image: url("https://i.pinimg.com/564x/12/b3/69/12b369ca10c732ef798fd464f8695e01.jpg");
+}
+
+.card-group[data-index="1"] > .little-card:nth-child(1){
+    background-image: url("https://i.pinimg.com/564x/c0/d9/53/c0d9538ce8bac83d1ecc7633a92bbbb6.jpg");
+}
+.card-group[data-index="1"] > .little-card:nth-child(3){
+    background-image: url("https://i.pinimg.com/564x/9a/09/77/9a0977da4c2866c6e8b05fb5a57172ac.jpg");
+}
+.card-group[data-index="1"] > .little-card:nth-child(5){
+    background-image: url("https://i.pinimg.com/564x/56/b0/79/56b07900774ac6052f8a533bfc64e4db.jpg");
+}
+.card-group[data-index="1"] > .little-card:nth-child(7){
+    background-image: url("https://i.pinimg.com/564x/b6/7e/ec/b67eecb55d0e2ec36b83342a62314d43.jpg");
+}
+
+
+
+
+
+
+.card-group[data-index="2"] > .big-card:nth-child(2){
+    background-image: url("https://i.pinimg.com/564x/0e/c5/86/0ec586c49bcc47e702cb43b9c4a2758c.jpg");
+}
+.card-group[data-index="2"] > .big-card:nth-child(4){
+    background-image: url("https://i.pinimg.com/564x/f4/32/be/f432be3bfde66baac835b925fff689c8.jpg");
+}
+.card-group[data-index="2"] > .big-card:nth-child(6){
+    background-image: url("https://i.pinimg.com/564x/0d/12/8e/0d128eed585b240bb6e15a23e5e041d3.jpg");
+}
+.card-group[data-index="2"] > .big-card:nth-child(8){
+    background-image: url("https://i.pinimg.com/564x/01/ea/a8/01eaa8c93fada32d72bd3c88a0c292d2.jpg");
+}
+
+
+.card-group[data-index="2"] > .little-card:nth-child(1){
+    background-image: url("https://i.pinimg.com/564x/3c/8d/24/3c8d24b02503305f01a73333c74b149e.jpg");
+}
+.card-group[data-index="2"] > .little-card:nth-child(3){
+    background-image: url("https://i.pinimg.com/564x/34/d5/e5/34d5e50a24ecf798c73d38dd917e52e7.jpg");
+}
+.card-group[data-index="2"] > .little-card:nth-child(5){
+    background-image: url("https://i.pinimg.com/564x/70/29/be/7029beb9f7a40b1a177288faaa41e5bb.jpg");
+}
+.card-group[data-index="2"] > .little-card:nth-child(7){
+    background-image: url("https://i.pinimg.com/736x/65/fa/d8/65fad848ec6c480aa6db426a4108d33d.jpg");
+}
+
+
+
+.card-group[data-status="becomig-active-from-before"]{
+    transform: translateX(-50%) scale(0);
+    transition: none;
+}
+
+.card-group[data-status="active"]{
+    transition-delay: 300ms;
+}
+
+.card-group[data-status="before"]{
+    transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becomig-active-from-after"]{
+    transform: translateX(50%) scale(0);
+    transition: none;
+}
+
